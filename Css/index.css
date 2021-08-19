@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+:root {
+  --text: #626567;
+  --navsub: #424949;
+  --bg: #cacfd2;
+  --navBar: #9b9da0;
+}
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  background-color: var(--bg);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 20px 10%;
+  font-family: kalam;
+  background: linear-gradient(var(--navBar), var(--bg));
+  color: var(--text);
+}
+
+.logo {
+  background-color: inherit;
+  font-size: 30px;
+  cursor: pointer;
+}
+.searchBox {
+  display: flex;
+  background-color: inherit;
+}
+.searchBar {
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  padding: 0 20px;
+  outline: none;
+}
+.searchBtn {
+  margin-left: 2px;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+}
+.searchBtn img {
+  align-items: center;
+  height: 15px;
+}
+.navBar {
+  background-color: inherit;
+}
+.navLinks {
+  background-color: inherit;
+  list-style: none;
+}
+.navLinks li {
+  background-color: inherit;
+  display: inline-block;
+}
+.navLinks li a {
+  background-color: inherit;
+  color: var(--navsub);
+  text-decoration: none;
+  padding: 0px 20px;
+}
+
+.hamBurger {
+  display: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.hamBurger div {
+  height: 3px;
+  width: 25px;
+  margin: 5px;
+  background-color: var(--text);
+  transition: 0.5s ease;
+}
+
+
+/*Body Css*/
+
+
+
+/*responsive config*/
+@media screen and (max-width: 1024px) {
+  * {
+    overflow-x: hidden;
+  }
+  .hamBurger {
+    display: block;
+  }
+
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0%;
+    top: 10vh;
+    width: 100vw;
+    background: linear-gradient(to left, var(--navBar), var(--bg));
+    transform: translateX(100%);
+    transition: transform 1s ease-in;
+  }
+}
+
+.navLinks li {
+  margin: 3vh 0;
+}
+
+.navLinks-active {
+  transform: translateX(0%);
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/*Body*/
